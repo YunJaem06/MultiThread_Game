@@ -4,15 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/night_sky_background"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_main_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/cookierun_bold"
+        android:text="1to25"
+        android:textColor="@color/white"
+        android:textSize="80sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_main_start"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/button_custom"
+        android:fontFamily="@font/cookierun_bold"
+        android:text="START"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_main_title" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_main_exit"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/button_custom"
+        android:fontFamily="@font/cookierun_bold"
+        android:text="EXIT"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_main_start" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
