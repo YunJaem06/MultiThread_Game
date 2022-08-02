@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/yunja/AndroidStudioProjects/MultiThread_Game/app/src/main/res/drawable/button_custom.xml" value="0.2235" />
+        <entry key="..\:/Users/yunja/AndroidStudioProjects/MultiThread_Game/app/src/main/res/drawable/number_button.xml" value="0.2235" />
         <entry key="..\:/Users/yunja/AndroidStudioProjects/MultiThread_Game/app/src/main/res/layout/activity_clear.xml" value="0.3651041666666667" />
-        <entry key="..\:/Users/yunja/AndroidStudioProjects/MultiThread_Game/app/src/main/res/layout/activity_game.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/yunja/AndroidStudioProjects/MultiThread_Game/app/src/main/res/layout/activity_game.xml" value="0.264" />
         <entry key="..\:/Users/yunja/AndroidStudioProjects/MultiThread_Game/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/yunja/AndroidStudioProjects/MultiThread_Game/app/src/main/res/layout/activity_over.xml" value="0.36614583333333334" />
       </map>
