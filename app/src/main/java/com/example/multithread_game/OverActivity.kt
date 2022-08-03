@@ -14,5 +14,15 @@ class OverActivity : AppCompatActivity() {
 
         binding = ActivityOverBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val clearTime = intent.getStringExtra("time")
+        val clearScore = intent.getStringExtra("score")
+
+        val clearM = clearTime!!.toInt() / 60
+        val clearS = clearTime.toInt() % 60
+
+        binding.tvOverTime.text = "시간 : $clearM : $clearS"
+
+        binding.tvOverScore.text = "점수 : "+ clearScore.toString()
     }
 }

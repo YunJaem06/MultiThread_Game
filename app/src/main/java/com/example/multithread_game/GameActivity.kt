@@ -24,6 +24,7 @@ class GameActivity : AppCompatActivity() {
     var hp = 3 // 목숨
     var score = 0 // 점수
     var number = mutableListOf<Int>()
+    var number2 = mutableListOf<Int>()
 
     var nowNumber = 1 // 현재 눌러야하는 번호
     var count = 10 // 점수
@@ -78,7 +79,7 @@ class GameActivity : AppCompatActivity() {
 
         bgmPlayer = MediaPlayer.create(this, R.raw.rinne_stopped_time)
 
-        randomNumber() // 숫자 랜덤배치
+        randomNumber25() // 숫자 랜덤배치
         scoreCount() // 점수 게산방식
 
         binding.ivGameStartBtn.setOnClickListener {
@@ -579,7 +580,7 @@ class GameActivity : AppCompatActivity() {
         }.start()
     }
 
-    private fun randomNumber() {
+    private fun randomNumber25() {
 
         for (i in 1..25) {
             number.add(i)

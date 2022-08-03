@@ -14,5 +14,16 @@ class ClearActivity : AppCompatActivity() {
 
         binding = ActivityClearBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val clearTime = intent.getStringExtra("time")
+        val clearScore = intent.getStringExtra("score")
+
+        val clearM = clearTime!!.toInt() / 60
+        val clearS = clearTime.toInt() % 60
+
+        binding.tvGameTime.text = "시간 : $clearM : $clearS"
+
+        binding.tvClearScore.text = "점수 : "+ clearScore.toString()
+
     }
 }
