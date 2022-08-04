@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/night_sky_background">
+    android:background="@drawable/creative_texture_fantasy">
 
     <TextView
         android:id="@+id/tv_game_clear"
@@ -67,14 +67,6 @@
             android:layout_weight="1"
             app:tint="@color/white"
             android:src="@drawable/icon_redo_arrow_symbol" />
-
-        <ImageView
-            android:id="@+id/iv_clear_exit"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:src="@drawable/exit_to_app_button"
-            app:tint="@color/white" />
 
     </LinearLayout>
 

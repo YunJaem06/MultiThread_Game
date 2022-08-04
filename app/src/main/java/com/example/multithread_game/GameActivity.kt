@@ -23,8 +23,8 @@ class GameActivity : AppCompatActivity() {
     var started = false // 시작 체크
     var hp = 3 // 목숨
     var score = 0 // 점수
-    var number = mutableListOf<Int>()
-    var number2 = mutableListOf<Int>()
+    var number = mutableListOf<Int>() // 1부터 25숫자 넣는곳
+    var number2 = mutableListOf<Int>() // 26부터 50숫자 넣는곳
 
     var nowNumber = 1 // 현재 눌러야하는 번호
     var count = 10 // 점수
@@ -32,6 +32,8 @@ class GameActivity : AppCompatActivity() {
 
     var gameClear = true // 게임 클리어
     var gameOver = true // 게임종료
+
+    var threadStop = true
 
     var timerhandler = object : Handler(Looper.getMainLooper()) { //타이머 핸들러
         override fun handleMessage(msg: Message) {
@@ -87,6 +89,7 @@ class GameActivity : AppCompatActivity() {
             bgmPlayer.isLooping = true
             bgmPlayer.start()
             started = true
+            threadStop = true
 
             thread(start = true) {
                 while (started) {
@@ -99,34 +102,34 @@ class GameActivity : AppCompatActivity() {
                     }
                 }
             }
-        }
 
-        // 클릭이 늦어질수록 낮은 점수를 곱하게 된다.
-        Thread() {
-            while (true) {
-                Thread.sleep(1000)
-                count -= 1
-                Log.d("점수 확인", "$count")
-                if (count <= 0) {
-                    count = 1
-                    Log.d("곱해야할 점수", "$count")
+            // 클릭이 늦어질수록 낮은 점수를 곱하게 된다.
+            Thread() {
+                while (threadStop) {
+                    Thread.sleep(1000)
+                    count -= 1
+                    Log.d("점수 확인", "$count")
+                    if (count <= 0) {
+                        count = 1
+                        Log.d("곱해야할 점수", "$count")
+                    }
                 }
-            }
-        }.start()
+            }.start()
+        }
 
         binding.btnGame1.setOnClickListener {
             if (!started) {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame1.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
                 binding.tvGameNownumber.text = nowNumber.toString()
-                count += 5
+                count += 2
                 btnCheck = true
                 binding.btnGame1.visibility = View.INVISIBLE
             }
@@ -136,14 +139,14 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame2.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
                 binding.tvGameNownumber.text = nowNumber.toString()
-                count += 5
+                count += 2
                 btnCheck = true
                 binding.btnGame2.visibility = View.INVISIBLE
             }
@@ -154,14 +157,14 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame3.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
                 binding.tvGameNownumber.text = nowNumber.toString()
-                count += 5
+                count += 2
                 btnCheck = true
                 binding.btnGame3.visibility = View.INVISIBLE
             }
@@ -172,7 +175,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame4.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -190,7 +193,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame5.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -208,7 +211,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame6.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -226,7 +229,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame7.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -244,7 +247,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame8.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -262,7 +265,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame9.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -280,7 +283,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame10.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -298,7 +301,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame11.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -316,7 +319,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame12.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -334,7 +337,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame13.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -352,7 +355,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame14.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -370,7 +373,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame15.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -388,7 +391,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame16.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -406,7 +409,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame17.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -424,7 +427,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame18.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -442,7 +445,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame19.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -460,7 +463,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame20.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -478,7 +481,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame21.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -496,7 +499,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame22.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -514,7 +517,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame23.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -532,7 +535,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame24.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -550,7 +553,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame25.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 100
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -567,7 +570,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame26.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -584,7 +587,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame27.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -601,7 +604,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame28.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -618,7 +621,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame29.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -635,7 +638,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame30.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -652,7 +655,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame31.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -669,7 +672,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame32.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -686,7 +689,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame33.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -703,7 +706,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame34.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -720,7 +723,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame35.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -737,7 +740,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame36.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -754,7 +757,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame37.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -771,7 +774,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame38.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -788,7 +791,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame39.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -805,7 +808,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame40.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -822,7 +825,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame41.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -839,7 +842,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame42.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -856,7 +859,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame43.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -873,7 +876,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame44.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -890,7 +893,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame45.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -907,7 +910,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame46.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -924,7 +927,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame47.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -941,7 +944,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame48.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -958,7 +961,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame49.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -975,7 +978,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame50.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
+                if (score >= 100) {
                     score -= 10000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
@@ -988,9 +991,10 @@ class GameActivity : AppCompatActivity() {
             }
         }
 
+        // 게임 종료 스레드
         Thread() {
-            while (gameOver){
-                if (hp == 0){
+            while (gameOver) {
+                if (hp == 0) {
                     var intent = Intent(this, OverActivity::class.java)
                     intent.putExtra("time", timer.toString())
                     intent.putExtra("score", score.toString())
@@ -1002,9 +1006,10 @@ class GameActivity : AppCompatActivity() {
             }
         }.start()
 
-        Thread(){
-            while (gameClear){
-                if (nowNumber == 51){
+        // 게임 클리어시
+        Thread() {
+            while (gameClear) {
+                if (nowNumber == 51) {
                     var intent = Intent(this, ClearActivity::class.java)
                     intent.putExtra("time", timer.toString())
                     intent.putExtra("score", score.toString())
@@ -1020,12 +1025,15 @@ class GameActivity : AppCompatActivity() {
     // 점수 계산
     private fun scoreCount() {
         Thread() {
-            while (true){
+            val countHandler = Handler(Looper.getMainLooper())
+            while (true) {
                 if (btnCheck) {
                     score += count * nowNumber
                     Log.d("점수확인", "$score $count $nowNumber")
                     btnCheck = false
-                    println(score)
+                    countHandler.post {
+                        binding.tvGameScore.text = score.toString()
+                    }
                 }
             }
         }.start()
@@ -1034,7 +1042,13 @@ class GameActivity : AppCompatActivity() {
     override fun onStop() {
         super.onStop()
         started = false
+        threadStop = false
         bgmPlayer.pause()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        threadStop = false
     }
 
     private fun randomNumber25() {

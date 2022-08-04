@@ -37,8 +37,5 @@ class ClearActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-        binding.ivClearExit.setOnClickListener {
-            exitProcess(0)
-        }
     }
 }

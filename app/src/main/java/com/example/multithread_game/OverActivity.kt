@@ -37,8 +37,5 @@ class OverActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-        binding.ivOverExit.setOnClickListener {
-            exitProcess(0)
-        }
     }
 }
