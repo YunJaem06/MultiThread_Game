@@ -53,13 +53,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_clear_score">
 
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:src="@drawable/exit_to_app_button"
-            app:tint="@color/white" />
-
-        <ImageView
+            android:id="@+id/iv_clear_home"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -67,11 +61,20 @@
             android:src="@drawable/home" />
 
         <ImageView
+            android:id="@+id/iv_clear_replay"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
             app:tint="@color/white"
             android:src="@drawable/icon_redo_arrow_symbol" />
+
+        <ImageView
+            android:id="@+id/iv_clear_exit"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:src="@drawable/exit_to_app_button"
+            app:tint="@color/white" />
 
     </LinearLayout>
 

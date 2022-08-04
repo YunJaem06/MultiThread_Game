@@ -21,30 +21,50 @@
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/white" />
 
-        <TextView
-            android:id="@+id/tv_game_timer"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/ll_game_info"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="20dp"
-            android:text="00 : 00"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/iv_game_start_btn" />
-
-        <TextView
-            android:id="@+id/tv_game_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="100dp"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="35sp"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_game_timer"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tv_game_timer" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_game_start_btn">
+
+            <TextView
+                android:id="@+id/tv_game_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cookierun_bold"
+                android:gravity="center"
+                android:text="00 : 00"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/tv_game_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/cookierun_bold"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/tv_game_nownumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cookierun_bold"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_game_life"
@@ -55,7 +75,7 @@
             android:layout_marginEnd="40dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_game_score">
+            app:layout_constraintTop_toBottomOf="@id/ll_game_info">
 
             <ImageView
                 android:id="@+id/iv_game_life1"
@@ -105,10 +125,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -117,10 +137,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -132,7 +152,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -144,7 +164,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -152,10 +172,10 @@
                     android:layout_width="0dp"
                     android:layout_height="65dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -178,7 +198,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -187,10 +207,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -199,10 +219,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -214,7 +234,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -225,7 +245,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -248,7 +268,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -260,7 +280,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -272,7 +292,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -281,10 +301,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -292,10 +312,10 @@
                     android:layout_width="0dp"
                     android:layout_height="65dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -315,10 +335,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -330,7 +350,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -342,7 +362,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -351,10 +371,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -362,10 +382,10 @@
                     android:layout_width="0dp"
                     android:layout_height="65dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -384,10 +404,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -399,7 +419,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -408,10 +428,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -423,7 +443,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -431,10 +451,10 @@
                     android:layout_width="0dp"
                     android:layout_height="65dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -469,7 +489,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -478,10 +498,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -490,10 +510,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -505,7 +525,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -513,10 +533,10 @@
                     android:layout_width="0dp"
                     android:layout_height="65dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -536,10 +556,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -551,7 +571,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -560,10 +580,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -575,7 +595,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -583,10 +603,10 @@
                     android:layout_width="0dp"
                     android:layout_height="65dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -609,7 +629,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -618,10 +638,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -633,7 +653,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -642,10 +662,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -653,10 +673,10 @@
                     android:layout_width="0dp"
                     android:layout_height="65dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -679,7 +699,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -688,10 +708,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -700,10 +720,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -712,10 +732,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -726,7 +746,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -745,10 +765,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -757,10 +777,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -772,7 +792,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -781,10 +801,10 @@
                     android:layout_height="65dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/number_button"
+                    android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -795,7 +815,7 @@
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
                     android:text=""
-                    android:textColor="#4a6171"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
             </LinearLayout>

@@ -1,9 +1,11 @@
 package com.example.multithread_game
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.multithread_game.databinding.ActivityGameBinding
 import com.example.multithread_game.databinding.ActivityOverBinding
+import kotlin.system.exitProcess
 
 class OverActivity : AppCompatActivity() {
 
@@ -24,5 +26,19 @@ class OverActivity : AppCompatActivity() {
         binding.tvOverTime.text = "시간 : $clearM : $clearS"
 
         binding.tvOverScore.text = "점수 : "+ clearScore.toString()
+
+        binding.ivOverHome.setOnClickListener {
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        binding.ivOverRetry.setOnClickListener {
+            var intent = Intent(this, GameActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        binding.ivOverExit.setOnClickListener {
+            exitProcess(0)
+        }
     }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/night_sky_background"
+    android:background="@drawable/romantic_fireworks_starry_sky"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:fontFamily="@font/cookierun_bold"
-        android:text="1to25"
+        android:text="1to50"
         android:textColor="@color/white"
         android:textSize="80sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,7 @@
         android:layout_marginTop="170dp"
         android:background="@drawable/button_custom"
         android:fontFamily="@font/cookierun_bold"
-        android:text="START"
+        android:text="시작"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +41,7 @@
         android:layout_marginTop="70dp"
         android:background="@drawable/button_custom"
         android:fontFamily="@font/cookierun_bold"
-        android:text="EXIT"
+        android:text="나가기"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
