@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnMainStart.setOnClickListener {
             var intent = Intent(this, GameActivity::class.java)
             startActivity(intent)
+            finish()
         }
         binding.btnMainExit.setOnClickListener {
             exitProcess(0)
