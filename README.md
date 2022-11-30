@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # [MultiThread을 이용하여 게임 제작]
 ***
 #### Tech Stack
@@ -47,4 +46,3 @@
 * tabLayout 활용에 대한 공부
 =======
 멀티쓰레드를 이용한 1to50 게임
->>>>>>> origin/master
