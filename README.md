@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [MultiThread을 이용하여 게임 제작]
 ***
 #### Tech Stack
@@ -44,3 +45,6 @@
 * 데이터 전달에 대한 것들
 * Jetpack Navigation Graph에 대해 공부
 * tabLayout 활용에 대한 공부
+=======
+멀티쓰레드를 이용한 1to50 게임
+>>>>>>> origin/master
