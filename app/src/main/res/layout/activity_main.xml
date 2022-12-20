@@ -25,7 +25,7 @@
         android:id="@+id/btn_main_start"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="130dp"
         android:background="@drawable/button_custom"
         android:fontFamily="@font/cookierun_bold"
         android:text="시작"
@@ -36,10 +36,25 @@
         app:layout_constraintTop_toBottomOf="@id/tv_main_title" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_main_score"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_custom"
+        android:fontFamily="@font/cookierun_bold"
+        android:text="점수"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_main_start" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_main_exit"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/button_custom"
         android:fontFamily="@font/cookierun_bold"
         android:text="나가기"
@@ -47,7 +62,7 @@
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_main_start" />
+        app:layout_constraintTop_toBottomOf="@id/btn_main_score" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
