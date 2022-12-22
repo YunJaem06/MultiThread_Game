@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="90dp"
         android:fontFamily="@font/human"
         android:text="easy"
         android:textColor="@color/white"
@@ -56,6 +56,93 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/tv_score_easy_time"
         app:layout_constraintTop_toTopOf="@id/tv_score_easy_time" />
+
+    <TextView
+        android:id="@+id/tv_score_normal_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/human"
+        android:text="normal"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_score_easy_time" />
+
+    <TextView
+        android:id="@+id/tv_score_normal_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="00:00"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_score_normal_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_score_normal_title" />
+
+    <TextView
+        android:id="@+id/tv_score_normal_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tv_score_normal_time"
+        app:layout_constraintTop_toTopOf="@id/tv_score_normal_time" />
+
+    <TextView
+        android:id="@+id/tv_score_hard_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/human"
+        android:text="hard"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_score_normal_time" />
+
+    <TextView
+        android:id="@+id/tv_score_hard_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="00:00"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_score_hard_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_score_hard_title" />
+
+    <TextView
+        android:id="@+id/tv_score_hard_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tv_score_hard_time"
+        app:layout_constraintTop_toTopOf="@id/tv_score_hard_time" />
+
+    <ImageView
+        android:id="@+id/btn_score_home"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/home"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tint="@color/white" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
