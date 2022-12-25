@@ -29,6 +29,10 @@
             android:exported="false"/>
         <activity android:name=".OverActivity"
             android:exported="false"/>
+        <activity android:name=".LevelActivity"
+            android:exported="false"/>
+        <activity android:name=".ScoreActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>

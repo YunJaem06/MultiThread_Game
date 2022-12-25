@@ -22,6 +22,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        binding.btnMainScore.setOnClickListener {
+            var intent = Intent(this, ScoreActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.btnMainExit.setOnClickListener {
             exitProcess(0)
         }

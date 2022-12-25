@@ -27,8 +27,11 @@ class GameActivity : AppCompatActivity() {
     var number2 = mutableListOf<Int>() // 26부터 50숫자 넣는곳
 
     var nowNumber = 1 // 현재 눌러야하는 번호
+    var endNumber = 0
     var count = 10 // 점수
     var btnCheck = false // 점수 체크용도
+    
+    var nowLevel = 0 // 난이도
 
     var gameClear = true // 게임 클리어
     var gameOver = true // 게임종료
@@ -1049,6 +1052,19 @@ class GameActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         bgmPlayer.stop()
+    }
+
+    private fun setLevel() {
+        var level = intent.getStringExtra("level").toString().toInt()
+        nowLevel = level
+
+        if (nowLevel == 1){
+            endNumber = 26
+        } else if (nowLevel == 2) {
+            endNumber = 51
+        } else if (nowLevel == 3) {
+            endNumber = 101
+        }
     }
 
     private fun randomNumber25() {

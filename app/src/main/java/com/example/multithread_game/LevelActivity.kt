@@ -17,16 +17,19 @@ class LevelActivity : AppCompatActivity() {
 
         binding.btnLevelEasy.setOnClickListener {
             val intent = Intent(this,GameActivity::class.java)
+            intent.putExtra("level",1)
             startActivity(intent)
             finish()
         }
         binding.btnLevelNormal.setOnClickListener {
             val intent = Intent(this,GameActivity::class.java)
+            intent.putExtra("level",2)
             startActivity(intent)
             finish()
         }
         binding.btnLevelHard.setOnClickListener {
             val intent = Intent(this,GameActivity::class.java)
+            intent.putExtra("level",3)
             startActivity(intent)
             finish()
         }
