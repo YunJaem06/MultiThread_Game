@@ -16,7 +16,7 @@ class LevelActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnLevelEasy.setOnClickListener {
-            val intent = Intent(this,GameActivity::class.java)
+            val intent = Intent(this@LevelActivity,GameActivity::class.java)
             intent.putExtra("level",1)
             startActivity(intent)
             finish()
