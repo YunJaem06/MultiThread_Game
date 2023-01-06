@@ -127,7 +127,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -139,7 +138,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -151,7 +149,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -163,7 +160,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -174,7 +170,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -197,7 +192,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -209,7 +203,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -221,7 +214,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -233,7 +225,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -244,7 +235,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -267,7 +257,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -279,7 +268,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -291,7 +279,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -303,7 +290,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -314,7 +300,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -337,7 +322,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -349,7 +333,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -361,7 +344,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -373,7 +355,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -384,7 +365,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -406,7 +386,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -418,7 +397,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button2"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -430,7 +408,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -442,7 +419,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button1"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -453,7 +429,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/number_button"
                     android:fontFamily="@font/cookierun_bold"
-                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 

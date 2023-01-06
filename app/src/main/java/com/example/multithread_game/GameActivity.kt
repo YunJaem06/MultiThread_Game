@@ -26,19 +26,12 @@ class GameActivity : AppCompatActivity() {
     var started = false // 시작 체크
     var hp = 3 // 목숨
     var score = 0 // 점수
-    var number1to25 = ArrayList<Int>() // 1부터 25숫자 넣는곳
-    var number26to50 = mutableListOf<Int>() // 26부터 50숫자 넣는곳
-    var number51to75 = mutableListOf<Int>() // 51부터 75숫자 넣는곳
-    var number76to100 = mutableListOf<Int>() // 76부터 100숫자 넣는곳
+    var number = mutableListOf<Int>()
+    var number2 = mutableListOf<Int>()
 
-    var nowNumber = 0 // 현재 눌러야하는 번호
-    var endNumber = 0
-    var buttonList = ArrayList<AppCompatButton>()
+    var nowNumber = 1 // 현재 눌러야하는 번호
     var count = 10 // 점수
     var btnCheck = false // 점수 체크용도
-
-    var nowLevel = 0 // 난이도
-
     var gameClear = true // 게임 클리어
     var gameOver = true // 게임종료
 
@@ -90,14 +83,8 @@ class GameActivity : AppCompatActivity() {
 
         bgmPlayer = MediaPlayer.create(this, R.raw.rinne_stopped_time)
 
-        setBtn() // 버튼 배열 초기화
-
-        setLevel() // 난이도
-
-        setMain() // 숫자 랜덤배치
+        randomNumber25() // 숫자 랜덤배치
         scoreCount() // 점수 게산방식
-        clickButton()
-        setRandomNum()
 
         binding.ivGameStartBtn.setOnClickListener {
             bgmPlayer.isLooping = true
@@ -130,6 +117,406 @@ class GameActivity : AppCompatActivity() {
                 }
             }.start()
         }
+        binding.btnGame1.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame1.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame1.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame2.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame2.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame2.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame3.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame3.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame3.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame4.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame4.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame4.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame5.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame5.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame5.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame6.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame6.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame6.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame7.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame7.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame7.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame8.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame8.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame8.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame9.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame9.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame9.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame10.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame10.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame10.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame11.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame11.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame11.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame12.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame12.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame12.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame13.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame13.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame13.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame14.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame14.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame14.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame15.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame15.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame15.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame16.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame16.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame16.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame17.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame17.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame17.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame18.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame18.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame18.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame19.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame19.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame19.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame20.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame20.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame20.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame21.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame21.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame21.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame22.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame22.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame22.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame23.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame23.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame23.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame24.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame24.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame24.visibility = View.INVISIBLE
+            }
+        }
+        binding.btnGame25.setOnClickListener {
+            if (!started) {
+                Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            } else if (started && binding.btnGame25.text.toString() != nowNumber.toString()) {
+                hp--
+                if(score >= 100){
+                    score -= 100
+                }
+                Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+            } else {
+                nowNumber++
+                count += 10
+                btnCheck = true
+                binding.btnGame25.visibility = View.INVISIBLE
+            }
+        }
 
         // 게임 종료 스레드
         Thread() {
@@ -149,7 +536,7 @@ class GameActivity : AppCompatActivity() {
         // 게임 클리어시
         Thread() {
             while (gameClear) {
-                if (nowNumber == 51) {
+                if (nowNumber == 26) {
                     var intent = Intent(this, ClearActivity::class.java)
                     intent.putExtra("time", timer.toString())
                     intent.putExtra("score", score.toString())
@@ -161,6 +548,8 @@ class GameActivity : AppCompatActivity() {
             }
         }.start()
     }
+
+
 
     // 점수 계산
     private fun scoreCount() {
@@ -179,6 +568,40 @@ class GameActivity : AppCompatActivity() {
         }.start()
     }
 
+    private fun randomNumber25() {
+
+        for (i in 1..25) {
+            number.add(i)
+        }
+        number.shuffle()
+        Log.d("섞인 숫자 확인", "$number")
+        binding.btnGame1.text = number[0].toString()
+        binding.btnGame2.text = number[1].toString()
+        binding.btnGame3.text = number[2].toString()
+        binding.btnGame4.text = number[3].toString()
+        binding.btnGame5.text = number[4].toString()
+        binding.btnGame6.text = number[5].toString()
+        binding.btnGame7.text = number[6].toString()
+        binding.btnGame8.text = number[7].toString()
+        binding.btnGame9.text = number[8].toString()
+        binding.btnGame10.text = number[9].toString()
+        binding.btnGame11.text = number[10].toString()
+        binding.btnGame12.text = number[11].toString()
+        binding.btnGame13.text = number[12].toString()
+        binding.btnGame14.text = number[13].toString()
+        binding.btnGame15.text = number[14].toString()
+        binding.btnGame16.text = number[15].toString()
+        binding.btnGame17.text = number[16].toString()
+        binding.btnGame18.text = number[17].toString()
+        binding.btnGame19.text = number[18].toString()
+        binding.btnGame20.text = number[19].toString()
+        binding.btnGame21.text = number[20].toString()
+        binding.btnGame22.text = number[21].toString()
+        binding.btnGame23.text = number[22].toString()
+        binding.btnGame24.text = number[23].toString()
+        binding.btnGame25.text = number[24].toString()
+    }
+
     override fun onStop() {
         super.onStop()
         started = false
@@ -189,151 +612,5 @@ class GameActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         bgmPlayer.stop()
-    }
-
-    private fun setLevel() {
-        var level = intent.extras?.get("level").toString().toInt()
-        nowLevel = level
-        Log.d("level", "$level")
-
-        if (nowLevel == 1) {
-            endNumber = 26
-        } else if (nowLevel == 2) {
-            endNumber = 51
-        } else if (nowLevel == 3) {
-            endNumber = 101
-        }
-    }
-
-    private fun setBtn() {
-        buttonList.add(binding.btnGame1)
-        buttonList.add(binding.btnGame2)
-        buttonList.add(binding.btnGame3)
-        buttonList.add(binding.btnGame4)
-        buttonList.add(binding.btnGame5)
-        buttonList.add(binding.btnGame6)
-        buttonList.add(binding.btnGame7)
-        buttonList.add(binding.btnGame8)
-        buttonList.add(binding.btnGame9)
-        buttonList.add(binding.btnGame10)
-        buttonList.add(binding.btnGame11)
-        buttonList.add(binding.btnGame12)
-        buttonList.add(binding.btnGame13)
-        buttonList.add(binding.btnGame14)
-        buttonList.add(binding.btnGame15)
-        buttonList.add(binding.btnGame16)
-        buttonList.add(binding.btnGame17)
-        buttonList.add(binding.btnGame18)
-        buttonList.add(binding.btnGame19)
-        buttonList.add(binding.btnGame20)
-        buttonList.add(binding.btnGame21)
-        buttonList.add(binding.btnGame22)
-        buttonList.add(binding.btnGame23)
-        buttonList.add(binding.btnGame24)
-        buttonList.add(binding.btnGame25)
-    }
-
-    private fun setMain() {
-
-        nowNumber = 1
-
-        for (i in 0..24) {
-            buttonList[i].text = number1to25[i].toString()
-        }
-    }
-
-    private fun setRandomNum() {
-        val random = Random
-        var ranNum = 0
-        var randomList = ArrayList<Int>()
-        var n = 0
-
-        when (nowLevel) {
-            3 -> {
-                while (n < 25) {
-                    ranNum = random.nextInt(25)
-
-                    if (!randomList.contains(ranNum)) {
-                        randomList.add(ranNum)
-                        number76to100.add(ranNum + 76)
-                    }
-                }
-                n = 0
-                randomList.clear()
-
-                while (n < 25) {
-                    ranNum = random.nextInt(25)
-
-                    if (!randomList.contains(ranNum)) {
-                        randomList.add(ranNum)
-                        number51to75.add(ranNum + 51)
-                    }
-                }
-                n = 0
-                randomList.clear()
-
-                while (n < 25) {
-                    ranNum = random.nextInt(25)
-
-                    if (!randomList.contains(ranNum)) {
-                        randomList.add(ranNum)
-                        number26to50.add(ranNum + 26)
-                    }
-                }
-                n = 0
-                randomList.clear()
-
-                while (n < 25) {
-                    ranNum = random.nextInt(25)
-
-                    if (!randomList.contains(ranNum)) {
-                        randomList.add(ranNum)
-                        number1to25.add(ranNum + 1)
-                    }
-                }
-                n = 0
-                randomList.clear()
-            }
-            1 -> {
-                while (n < 25) {
-                    ranNum = random.nextInt(25)
-
-                    if (!randomList.contains(ranNum)) {
-                        randomList.add(ranNum)
-                        number1to25.add(ranNum + 1)
-                        n++
-                    }
-                }
-                n = 0
-                randomList.clear()
-            }
-             else -> {
-                 nowLevel = 1
-                 setRandomNum()
-             }
-        }
-    }
-
-    private fun clickButton() {
-        for (i in 0..24) {
-            buttonList[i].setOnClickListener {
-                if (nowLevel == 1) {
-                    if (!started) {
-                        Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
-                    } else if (started && number1to25[i].toString() != nowNumber.toString()) {
-                        hp--
-                        if (score >= 100) {
-                            score -= 100
-                        }
-                        Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
-                    } else {
-                        nowNumber++
-                        binding.tvGameNownumber.text = nowNumber.toString()
-                        count += 2
-                        buttonList[i].visibility = View.INVISIBLE
-                    }
-                }
-            }
-        }
     }
 }
