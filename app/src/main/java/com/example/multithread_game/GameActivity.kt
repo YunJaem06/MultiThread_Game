@@ -129,7 +129,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame1.visibility = View.INVISIBLE
             }
@@ -145,7 +145,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame2.visibility = View.INVISIBLE
             }
@@ -161,7 +161,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame3.visibility = View.INVISIBLE
             }
@@ -177,7 +177,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame4.visibility = View.INVISIBLE
             }
@@ -193,7 +193,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame5.visibility = View.INVISIBLE
             }
@@ -209,7 +209,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame6.visibility = View.INVISIBLE
             }
@@ -225,7 +225,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame7.visibility = View.INVISIBLE
             }
@@ -241,7 +241,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame8.visibility = View.INVISIBLE
             }
@@ -257,7 +257,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame9.visibility = View.INVISIBLE
             }
@@ -273,7 +273,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame10.visibility = View.INVISIBLE
             }
@@ -289,7 +289,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame11.visibility = View.INVISIBLE
             }
@@ -305,7 +305,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame12.visibility = View.INVISIBLE
             }
@@ -321,7 +321,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame13.visibility = View.INVISIBLE
             }
@@ -337,7 +337,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame14.visibility = View.INVISIBLE
             }
@@ -353,7 +353,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame15.visibility = View.INVISIBLE
             }
@@ -369,7 +369,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame16.visibility = View.INVISIBLE
             }
@@ -385,7 +385,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame17.visibility = View.INVISIBLE
             }
@@ -401,7 +401,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame18.visibility = View.INVISIBLE
             }
@@ -417,7 +417,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame19.visibility = View.INVISIBLE
             }
@@ -433,7 +433,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame20.visibility = View.INVISIBLE
             }
@@ -449,7 +449,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame21.visibility = View.INVISIBLE
             }
@@ -465,7 +465,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame22.visibility = View.INVISIBLE
             }
@@ -481,7 +481,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame23.visibility = View.INVISIBLE
             }
@@ -497,7 +497,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame24.visibility = View.INVISIBLE
             }
@@ -513,7 +513,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 2
                 btnCheck = true
                 binding.btnGame25.visibility = View.INVISIBLE
             }
@@ -523,13 +523,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame26.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame26.visibility = View.INVISIBLE
             }
@@ -539,13 +539,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame27.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame27.visibility = View.INVISIBLE
             }
@@ -555,13 +555,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame28.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame28.visibility = View.INVISIBLE
             }
@@ -571,13 +571,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame29.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame29.visibility = View.INVISIBLE
             }
@@ -587,13 +587,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame30.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame30.visibility = View.INVISIBLE
             }
@@ -603,13 +603,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame31.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame31.visibility = View.INVISIBLE
             }
@@ -619,13 +619,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame32.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame32.visibility = View.INVISIBLE
             }
@@ -635,13 +635,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame33.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame33.visibility = View.INVISIBLE
             }
@@ -651,13 +651,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame34.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame34.visibility = View.INVISIBLE
             }
@@ -667,13 +667,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame35.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame35.visibility = View.INVISIBLE
             }
@@ -683,13 +683,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame36.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame36.visibility = View.INVISIBLE
             }
@@ -699,13 +699,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame37.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame37.visibility = View.INVISIBLE
             }
@@ -715,13 +715,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame38.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame38.visibility = View.INVISIBLE
             }
@@ -731,13 +731,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame39.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame39.visibility = View.INVISIBLE
             }
@@ -747,13 +747,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame40.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame40.visibility = View.INVISIBLE
             }
@@ -763,13 +763,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame41.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame41.visibility = View.INVISIBLE
             }
@@ -779,13 +779,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame42.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame42.visibility = View.INVISIBLE
             }
@@ -795,13 +795,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame43.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame43.visibility = View.INVISIBLE
             }
@@ -811,13 +811,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame44.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame44.visibility = View.INVISIBLE
             }
@@ -827,13 +827,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame45.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame45.visibility = View.INVISIBLE
             }
@@ -843,13 +843,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame46.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame46.visibility = View.INVISIBLE
             }
@@ -859,13 +859,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame47.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame47.visibility = View.INVISIBLE
             }
@@ -875,13 +875,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame48.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame48.visibility = View.INVISIBLE
             }
@@ -891,13 +891,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame49.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame49.visibility = View.INVISIBLE
             }
@@ -907,13 +907,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
             } else if (started && binding.btnGame50.text.toString() != nowNumber.toString()) {
                 hp--
-                if(score >= 100){
-                    score -= 100
+                if(score >= 1000){
+                    score -= 1000
                 }
                 Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
             } else {
                 nowNumber++
-                count += 10
+                count += 5
                 btnCheck = true
                 binding.btnGame50.visibility = View.INVISIBLE
             }
