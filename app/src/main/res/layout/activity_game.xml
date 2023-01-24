@@ -100,366 +100,366 @@
 
         </LinearLayout>
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="30dp"
-            android:columnCount="1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ll_game_life">
+<!--        <GridLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:columnCount="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/ll_game_life">-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="15dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginEnd="15dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:orientation="horizontal">-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_26"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_26"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_27"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_27"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_28"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_28"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_29"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_29"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_30"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_30"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="15dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginEnd="15dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:orientation="horizontal">-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_31"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_31"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_32"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_32"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_33"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_33"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_34"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_34"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_35"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_35"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="15dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginEnd="15dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:orientation="horizontal">-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_36"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_36"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_37"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_37"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_38"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_38"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_39"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_39"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_40"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_40"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="15dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginEnd="15dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:orientation="horizontal">-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_41"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_41"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_42"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_42"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_43"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_43"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_44"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_44"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_45"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_45"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="15dp"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="15dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginEnd="15dp"-->
+<!--                android:orientation="horizontal">-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_46"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_46"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_47"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_47"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_48"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_48"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_49"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_49"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_game_50"
-                    android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/number_button"
-                    android:fontFamily="@font/cookierun_bold"
-                    android:text=""
-                    android:textColor="#4a6171"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_game_50"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/number_button"-->
+<!--                    android:fontFamily="@font/cookierun_bold"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#4a6171"-->
+<!--                    android:textSize="25sp" />-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
-        </GridLayout>
+<!--        </GridLayout>-->
 
         <GridLayout
             android:layout_width="match_parent"
