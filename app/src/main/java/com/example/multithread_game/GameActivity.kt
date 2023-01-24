@@ -1,6 +1,7 @@
 package com.example.multithread_game
 
 import android.content.Intent
+import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
@@ -9,7 +10,9 @@ import android.os.Message
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 import com.example.multithread_game.databinding.ActivityGameBinding
 import kotlin.concurrent.thread
 import java.util.*
@@ -25,7 +28,7 @@ class GameActivity : AppCompatActivity() {
     var hp = 3 // 목숨
     var score = 0 // 점수
 
-    val buttonList = ArrayList<Button>()
+    val buttonList = ArrayList<AppCompatButton>()
 
     var number = mutableListOf<Int>()
     var number2 = mutableListOf<Int>()
@@ -92,7 +95,9 @@ class GameActivity : AppCompatActivity() {
 
 //        randomNumber25() // 숫자 랜덤배치
 //        randomNumber50()
-        scoreCount() // 점수 게산방식
+        scoreCount()
+
+        setButtonClick()// 점수 게산방식
 
         binding.ivGameStartBtn.setOnClickListener {
             bgmPlayer.isLooping = true
@@ -1058,40 +1063,6 @@ class GameActivity : AppCompatActivity() {
 //        binding.btnGame25.text = number[24].toString()
 //    }
 
-//    private fun randomNumber50() {
-//
-//        for (i in 26..50) {
-//            number2.add(i)
-//        }
-//        number2.shuffle()
-//        Log.d("25번부터", "$number2")
-//
-//        binding.btnGame26.text = number2[0].toString()
-//        binding.btnGame27.text = number2[1].toString()
-//        binding.btnGame28.text = number2[2].toString()
-//        binding.btnGame29.text = number2[3].toString()
-//        binding.btnGame30.text = number2[4].toString()
-//        binding.btnGame31.text = number2[5].toString()
-//        binding.btnGame32.text = number2[6].toString()
-//        binding.btnGame33.text = number2[7].toString()
-//        binding.btnGame34.text = number2[8].toString()
-//        binding.btnGame35.text = number2[9].toString()
-//        binding.btnGame36.text = number2[10].toString()
-//        binding.btnGame37.text = number2[11].toString()
-//        binding.btnGame38.text = number2[12].toString()
-//        binding.btnGame39.text = number2[13].toString()
-//        binding.btnGame40.text = number2[14].toString()
-//        binding.btnGame41.text = number2[15].toString()
-//        binding.btnGame42.text = number2[16].toString()
-//        binding.btnGame43.text = number2[17].toString()
-//        binding.btnGame44.text = number2[18].toString()
-//        binding.btnGame45.text = number2[19].toString()
-//        binding.btnGame46.text = number2[20].toString()
-//        binding.btnGame47.text = number2[21].toString()
-//        binding.btnGame48.text = number2[22].toString()
-//        binding.btnGame49.text = number2[23].toString()
-//        binding.btnGame50.text = number2[24].toString()
-//    }
 
     private fun setNumberList() {
 
@@ -1125,7 +1096,7 @@ class GameActivity : AppCompatActivity() {
 
     private fun setFirstButton() {
 
-        for(i in 0..24) {
+        for (i in 0..24) {
             buttonList[i].text = number[i].toString()
         }
     }
@@ -1161,6 +1132,35 @@ class GameActivity : AppCompatActivity() {
         }
         i = 0
         redundantInt.clear()
+    }
+
+    private fun setButtonClick() {
+        for (i in 0..24) {
+            buttonList[i].setOnClickListener {
+                if (!started) {
+                    Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+                } else if (nowNumber == number[i]) {
+                    nowNumber++
+                    buttonList[i].text = number2[i].toString()
+                    binding.tvGameNownumber.text = nowNumber.toString()
+                    count += 5
+                    btnCheck = true
+                } else if (nowNumber == number2[i]) {
+                    nowNumber++
+                    binding.tvGameNownumber.text = nowNumber.toString()
+                    count += 5
+                    btnCheck = true
+                    buttonList[i].visibility = View.INVISIBLE
+                } else {
+                    hp--
+                    if (score >= 1000) {
+                        score -= 1000
+                    }
+                    Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
     }
 
     override fun onStop() {
