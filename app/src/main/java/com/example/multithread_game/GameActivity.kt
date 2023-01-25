@@ -30,12 +30,14 @@ class GameActivity : AppCompatActivity() {
 
     var number = mutableListOf<Int>()
     var number2 = mutableListOf<Int>()
+    var number3 = mutableListOf<Int>()
+    var number4 = mutableListOf<Int>()
 
     var nowNumber = 1 // 현재 눌러야하는 번호
-    var count = 10 // 점수
-    var btnCheck = false // 점수 체크용도
+    var count = 10 // 점수 증가량
+    var btnCheck = false // 점수 체크 용도
     var gameClear = true // 게임 클리어
-    var gameOver = true // 게임종료
+    var gameOver = true // 게임 종료
 
     var threadStop = true
 
@@ -85,15 +87,15 @@ class GameActivity : AppCompatActivity() {
 
         bgmPlayer = MediaPlayer.create(this, R.raw.rinne_stopped_time)
 
-        setNumberList()
+        setNumberList() // 버튼 추가
 
-        setRandomNumber()
+        setRandomNumber() // 버튼 랜덤 배치
 
-        setFirstButton()
+        setFirstButton() // 버튼 설정
 
         scoreCount() // 점수 계산 방식
 
-        setButtonClick()
+        setButtonClick() // 버튼 클릭시 동작 확인
 
         binding.ivGameStartBtn.setOnClickListener {
             bgmPlayer.isLooping = true
@@ -113,7 +115,7 @@ class GameActivity : AppCompatActivity() {
                 }
             }
 
-            // 클릭이 늦어질수록 낮은 점수를 곱하게 된다.
+            // 클릭이 늦어 질수록 낮은 점수를 곱하게 된다.
             Thread() {
                 while (threadStop) {
                     Thread.sleep(1000)
@@ -215,15 +217,13 @@ class GameActivity : AppCompatActivity() {
     private fun setRandomNumber() {
         val random = Random()
         var randInt = 0
-        var redundantInt = ArrayList<Int>()  // 중복 체크 용도
+        var redundantInt = ArrayList<Int>()
         var i = 0
-        // 자바의 case 문 ==> 코틀린의 when 문
-        // 랜덤으로 뽑아올 때 0부터 뽑아오므로 원하는 숫자를 가져오기 위해 1, 26, 51, 76 더해서 저장
-        // 보통 난이도일 때 랜덤 숫자 25개씩 2개 배열에 저장
+
         while (i < 25) {
             randInt = random.nextInt(25)
 
-            if (!redundantInt.contains(randInt)) { // 랜덤으로 숫자 뽑아올 때 중복 방지
+            if (!redundantInt.contains(randInt)) {
                 redundantInt.add(randInt)
                 number2.add(randInt + 26)
                 i++
@@ -235,7 +235,7 @@ class GameActivity : AppCompatActivity() {
         while (i < 25) {
             randInt = random.nextInt(25)
 
-            if (!redundantInt.contains(randInt)) { // 랜덤으로 숫자 뽑아올 때 중복 방지
+            if (!redundantInt.contains(randInt)) {
                 redundantInt.add(randInt)
                 number.add(randInt + 1)
                 i++
