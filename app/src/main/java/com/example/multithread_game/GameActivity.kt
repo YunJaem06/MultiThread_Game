@@ -25,6 +25,7 @@ class GameActivity : AppCompatActivity() {
     var started = false // 시작 체크
     var hp = 3 // 목숨
     var score = 0 // 점수
+    var level = 0 // 난이도
 
     val buttonList = ArrayList<AppCompatButton>()
 
@@ -34,6 +35,8 @@ class GameActivity : AppCompatActivity() {
     var number4 = mutableListOf<Int>()
 
     var nowNumber = 1 // 현재 눌러야하는 번호
+    var endNumber = 0
+
     var count = 10 // 점수 증가량
     var btnCheck = false // 점수 체크 용도
     var gameClear = true // 게임 클리어
@@ -88,6 +91,8 @@ class GameActivity : AppCompatActivity() {
         bgmPlayer = MediaPlayer.create(this, R.raw.rinne_stopped_time)
 
         setNumberList() // 버튼 추가
+
+        setLevel() // 난이도 설정
 
         setRandomNumber() // 버튼 랜덤 배치
 
@@ -212,6 +217,26 @@ class GameActivity : AppCompatActivity() {
         for (i in 0..24) {
             buttonList[i].text = number[i].toString()
         }
+    }
+
+    // 난이도 설정
+    private fun setLevel() {
+        val levelInt = intent.extras?.get("level").toString().toInt()
+        level = levelInt
+
+        // 난이도 별 끝나는 숫자 설정
+        when (level) {
+            1 -> {
+                endNumber = 26
+            }
+            2 -> {
+                endNumber = 51
+            }
+            3 -> {
+                endNumber = 101
+            }
+        }
+
     }
 
     private fun setRandomNumber() {

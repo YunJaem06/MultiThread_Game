@@ -22,18 +22,21 @@ class LevelActivity : AppCompatActivity() {
 
         binding.btnLevelEasy.setOnClickListener {
             var intent = Intent(this, GameActivity::class.java)
+            intent.putExtra("level", 1)
             startActivity(intent)
             finish()
         }
 
         binding.btnLevelNormal.setOnClickListener {
             var intent = Intent(this, GameActivity::class.java)
+            intent.putExtra("level", 2)
             startActivity(intent)
             finish()
         }
 
         binding.btnLevelHard.setOnClickListener {
             var intent = Intent(this, GameActivity::class.java)
+            intent.putExtra("level", 3)
             startActivity(intent)
             finish()
         }
