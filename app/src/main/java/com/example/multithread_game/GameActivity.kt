@@ -152,7 +152,7 @@ class GameActivity : AppCompatActivity() {
         // 게임 클리어 스레료
         Thread() {
             while (gameClear) {
-                if (nowNumber == 51) {
+                if (nowNumber == endNumber) {
                     var intent = Intent(this, ClearActivity::class.java)
                     intent.putExtra("time", timer.toString())
                     intent.putExtra("score", score.toString())
@@ -245,59 +245,181 @@ class GameActivity : AppCompatActivity() {
         var redundantInt = ArrayList<Int>()
         var i = 0
 
-        while (i < 25) {
-            randInt = random.nextInt(25)
+        when (level) {
+            3 -> { // 하드 난이도일 때, 랜덤 숫자 25개씩 4개 배열에 저장
+                while (i < 25) {
+                    randInt = random.nextInt(25)
 
-            if (!redundantInt.contains(randInt)) {
-                redundantInt.add(randInt)
-                number2.add(randInt + 26)
-                i++
+                    if (!redundantInt.contains(randInt)) {  // 랜덤으로 숫자 뽑아올 때 중복 방지
+                        redundantInt.add(randInt)
+                        number4.add(randInt + 76)
+                        i++
+                    }
+                }
+                i = 0
+                redundantInt.clear()
+
+                while (i < 25) {
+                    randInt = random.nextInt(25)
+
+                    if (!redundantInt.contains(randInt)) {  // 랜덤으로 숫자 뽑아올 때 중복 방지
+                        redundantInt.add(randInt)
+                        number3.add(randInt + 51)
+                        i++
+                    }
+                }
+                i = 0
+                redundantInt.clear()
+
+                while (i < 25) {
+                    randInt = random.nextInt(25)
+
+                    if (!redundantInt.contains(randInt)) { // 랜덤으로 숫자 뽑아올 때 중복 방지
+                        redundantInt.add(randInt)
+                        number2.add(randInt + 26)
+                        i++
+                    }
+                }
+                i = 0
+                redundantInt.clear()
+
+                while (i < 25) {
+                    randInt = random.nextInt(25)
+
+                    if (!redundantInt.contains(randInt)) { // 랜덤으로 숫자 뽑아올 때 중복 방지
+                        redundantInt.add(randInt)
+                        number.add(randInt + 1)
+                        i++
+                    }
+                }
+                i = 0
+                redundantInt.clear()
+
             }
-        }
-        i = 0
-        redundantInt.clear()
+            2 -> { // 보통 난이도일 때 랜덤 숫자 25개씩 2개 배열에 저장
+                while (i < 25) {
+                    randInt = random.nextInt(25)
 
-        while (i < 25) {
-            randInt = random.nextInt(25)
+                    if (!redundantInt.contains(randInt)) { // 랜덤으로 숫자 뽑아올 때 중복 방지
+                        redundantInt.add(randInt)
+                        number2.add(randInt + 26)
+                        i++
+                    }
+                }
+                i = 0
+                redundantInt.clear()
 
-            if (!redundantInt.contains(randInt)) {
-                redundantInt.add(randInt)
-                number.add(randInt + 1)
-                i++
+                while (i < 25) {
+                    randInt = random.nextInt(25)
+
+                    if (!redundantInt.contains(randInt)) { // 랜덤으로 숫자 뽑아올 때 중복 방지
+                        redundantInt.add(randInt)
+                        number.add(randInt + 1)
+                        i++
+                    }
+                }
+                i = 0
+                redundantInt.clear()
+
             }
+            1 -> { // 쉬움 난이도일 때 랜덤 숫자 25개 배열에 저장
+                while (i < 25) {
+                    randInt = random.nextInt(25)
+
+                    if (!redundantInt.contains(randInt)) { // 랜덤으로 숫자 뽑아올 때 중복 방지
+                        redundantInt.add(randInt)
+                        number.add(randInt + 1)
+                        i++
+                    }
+                }
+                i = 0
+                redundantInt.clear()
+
+            }
+            else -> level = 2
         }
-        i = 0
-        redundantInt.clear()
     }
 
     private fun setButtonClick() {
         for (i in 0..24) {
             buttonList[i].setOnClickListener {
-                if (!started) {
-                    Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
-                } else if (nowNumber == number[i]) {
-                    nowNumber++
-                    buttonList[i].text = number2[i].toString()
-                    binding.tvGameNownumber.text = nowNumber.toString()
-                    count += 5
-                    btnCheck = true
-                } else if (nowNumber == number2[i]) {
-                    nowNumber++
-                    binding.tvGameNownumber.text = nowNumber.toString()
-                    count += 5
-                    btnCheck = true
-                    buttonList[i].visibility = View.INVISIBLE
-                } else {
-                    hp--
-                    if (score >= 1000) {
-                        score -= 1000
+                if (level == 1) {
+                    if (!started) {
+                        Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+                    } else if (nowNumber == number[i]) {
+                        nowNumber++
+                        binding.tvGameNownumber.text = nowNumber.toString()
+                        count += 5
+                        btnCheck = true
+                        buttonList[i].visibility = View.INVISIBLE
+                    } else {
+                        hp--
+                        if (score >= 1000) {
+                            score -= 1000
+                        }
+                        Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
                     }
-                    Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+                } else if (level == 2) {
+                    if (!started) {
+                        Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+                    } else if (nowNumber == number[i]) {
+                        nowNumber++
+                        buttonList[i].text = number2[i].toString()
+                        binding.tvGameNownumber.text = nowNumber.toString()
+                        count += 5
+                        btnCheck = true
+                    } else if (nowNumber == number2[i]) {
+                        nowNumber++
+                        binding.tvGameNownumber.text = nowNumber.toString()
+                        count += 5
+                        btnCheck = true
+                        buttonList[i].visibility = View.INVISIBLE
+                    } else {
+                        hp--
+                        if (score >= 1000) {
+                            score -= 1000
+                        }
+                        Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+                    }
+                } else if (level == 3) {
+                    if (!started) {
+                        Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+                    } else if (nowNumber == number[i]) {
+                        nowNumber++
+                        buttonList[i].text = number2[i].toString()
+                        binding.tvGameNownumber.text = nowNumber.toString()
+                        count += 5
+                        btnCheck = true
+                    } else if (nowNumber == number2[i]) {
+                        nowNumber++
+                        buttonList[i].text = number3[i].toString()
+                        binding.tvGameNownumber.text = nowNumber.toString()
+                        count += 5
+                        btnCheck = true
+                    } else if (nowNumber == number3[i]) {
+                        nowNumber++
+                        buttonList[i].text = number4[i].toString()
+                        binding.tvGameNownumber.text = nowNumber.toString()
+                        count += 5
+                        btnCheck = true
+                    } else if (nowNumber == number4[i]) {
+                        nowNumber++
+                        binding.tvGameNownumber.text = nowNumber.toString()
+                        count += 5
+                        btnCheck = true
+                        buttonList[i].visibility = View.INVISIBLE
+                    } else {
+                        hp--
+                        if (score >= 1000) {
+                            score -= 1000
+                        }
+                        Toast.makeText(this, "HP : $hp", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
         }
-
     }
+
     override fun onStop() {
         super.onStop()
         started = false
