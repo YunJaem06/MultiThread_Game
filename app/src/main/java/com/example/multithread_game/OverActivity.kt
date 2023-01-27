@@ -33,7 +33,7 @@ class OverActivity : AppCompatActivity() {
             finish()
         }
         binding.ivOverRetry.setOnClickListener {
-            var intent = Intent(this, GameActivity::class.java)
+            var intent = Intent(this, LevelActivity::class.java)
             startActivity(intent)
             finish()
         }

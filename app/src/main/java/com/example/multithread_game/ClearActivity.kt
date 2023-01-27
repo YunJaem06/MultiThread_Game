@@ -1,6 +1,7 @@
 package com.example.multithread_game
 
 import android.content.Intent
+import android.graphics.drawable.LevelListDrawable
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.multithread_game.databinding.ActivityClearBinding
@@ -33,7 +34,7 @@ class ClearActivity : AppCompatActivity() {
             finish()
         }
         binding.ivClearReplay.setOnClickListener {
-            var intent = Intent(this, GameActivity::class.java)
+            var intent = Intent(this, LevelActivity::class.java)
             startActivity(intent)
             finish()
         }
