@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import com.example.multithread_game.GlobalApplication.Companion.pref
 import com.example.multithread_game.databinding.ActivityGameBinding
 import kotlin.concurrent.thread
 import java.util.*
@@ -90,6 +91,8 @@ class GameActivity : AppCompatActivity() {
 
         bgmPlayer = MediaPlayer.create(this, R.raw.rinne_stopped_time)
 
+        scoreCount() // 점수 계산 방식
+
         setNumberList() // 버튼 추가
 
         setLevel() // 난이도 설정
@@ -97,8 +100,6 @@ class GameActivity : AppCompatActivity() {
         setRandomNumber() // 버튼 랜덤 배치
 
         setFirstButton() // 버튼 설정
-
-        scoreCount() // 점수 계산 방식
 
         setButtonClick() // 버튼 클릭시 동작 확인
 
@@ -156,6 +157,7 @@ class GameActivity : AppCompatActivity() {
                     var intent = Intent(this, ClearActivity::class.java)
                     intent.putExtra("time", timer.toString())
                     intent.putExtra("score", score.toString())
+                    intent.putExtra("level", level)
                     bgmPlayer.stop()
                     gameClear = false // false로 바꾸면 스레드 종료함
                     startActivity(intent)
@@ -221,7 +223,7 @@ class GameActivity : AppCompatActivity() {
 
     // 난이도 설정
     private fun setLevel() {
-        val levelInt = intent.getIntExtra("level",0)
+        val levelInt = intent.getIntExtra("level", 0)
         level = levelInt
 
         // 끝나는 숫자 설정
