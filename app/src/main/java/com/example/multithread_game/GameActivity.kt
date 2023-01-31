@@ -221,10 +221,10 @@ class GameActivity : AppCompatActivity() {
 
     // 난이도 설정
     private fun setLevel() {
-        val levelInt = intent.extras?.get("level").toString().toInt()
+        val levelInt = intent.getIntExtra("level",0)
         level = levelInt
 
-        // 난이도 별 끝나는 숫자 설정
+        // 끝나는 숫자 설정
         when (level) {
             1 -> {
                 endNumber = 26
@@ -241,99 +241,99 @@ class GameActivity : AppCompatActivity() {
 
     private fun setRandomNumber() {
         val random = Random()
-        var randInt = 0
-        var redundantInt = ArrayList<Int>()
+        var num = 0
+        var randomInt = ArrayList<Int>()
         var i = 0
 
         when (level) {
-            3 -> { // 하드 난이도일 때, 랜덤 숫자 25개씩 4개 배열에 저장
+            3 -> { // 난이도 hard 일때, 랜덤 숫자 25개씩 4개 배열에 저장
                 while (i < 25) {
-                    randInt = random.nextInt(25)
+                    num = random.nextInt(25) // 랜덤 숫자 저장
 
-                    if (!redundantInt.contains(randInt)) {  // 랜덤으로 숫자 뽑아올 때 중복 방지
-                        redundantInt.add(randInt)
-                        number4.add(randInt + 76)
+                    if (!randomInt.contains(num)) {  // 그 숫자 중복일 경우 다시 뽑기
+                        randomInt.add(num)
+                        number4.add(num + 76)
                         i++
                     }
                 }
                 i = 0
-                redundantInt.clear()
+                randomInt.clear() // 뽑은 숫자 배열 정리
 
                 while (i < 25) {
-                    randInt = random.nextInt(25)
+                    num = random.nextInt(25)
 
-                    if (!redundantInt.contains(randInt)) {  // 랜덤으로 숫자 뽑아올 때 중복 방지
-                        redundantInt.add(randInt)
-                        number3.add(randInt + 51)
+                    if (!randomInt.contains(num)) {
+                        randomInt.add(num)
+                        number3.add(num + 51)
                         i++
                     }
                 }
                 i = 0
-                redundantInt.clear()
+                randomInt.clear()
 
                 while (i < 25) {
-                    randInt = random.nextInt(25)
+                    num = random.nextInt(25)
 
-                    if (!redundantInt.contains(randInt)) { // 랜덤으로 숫자 뽑아올 때 중복 방지
-                        redundantInt.add(randInt)
-                        number2.add(randInt + 26)
+                    if (!randomInt.contains(num)) {
+                        randomInt.add(num)
+                        number2.add(num + 26)
                         i++
                     }
                 }
                 i = 0
-                redundantInt.clear()
+                randomInt.clear()
 
                 while (i < 25) {
-                    randInt = random.nextInt(25)
+                    num = random.nextInt(25)
 
-                    if (!redundantInt.contains(randInt)) { // 랜덤으로 숫자 뽑아올 때 중복 방지
-                        redundantInt.add(randInt)
-                        number.add(randInt + 1)
+                    if (!randomInt.contains(num)) {
+                        randomInt.add(num)
+                        number.add(num + 1)
                         i++
                     }
                 }
                 i = 0
-                redundantInt.clear()
+                randomInt.clear()
 
             }
-            2 -> { // 보통 난이도일 때 랜덤 숫자 25개씩 2개 배열에 저장
+            2 -> { // 난이도 normal 일때, 랜덤 숫자 25개씩 2개 배열에 저장
                 while (i < 25) {
-                    randInt = random.nextInt(25)
+                    num = random.nextInt(25)
 
-                    if (!redundantInt.contains(randInt)) { // 랜덤으로 숫자 뽑아올 때 중복 방지
-                        redundantInt.add(randInt)
-                        number2.add(randInt + 26)
+                    if (!randomInt.contains(num)) {
+                        randomInt.add(num)
+                        number2.add(num + 26)
                         i++
                     }
                 }
                 i = 0
-                redundantInt.clear()
+                randomInt.clear()
 
                 while (i < 25) {
-                    randInt = random.nextInt(25)
+                    num = random.nextInt(25)
 
-                    if (!redundantInt.contains(randInt)) { // 랜덤으로 숫자 뽑아올 때 중복 방지
-                        redundantInt.add(randInt)
-                        number.add(randInt + 1)
+                    if (!randomInt.contains(num)) {
+                        randomInt.add(num)
+                        number.add(num + 1)
                         i++
                     }
                 }
                 i = 0
-                redundantInt.clear()
+                randomInt.clear()
 
             }
-            1 -> { // 쉬움 난이도일 때 랜덤 숫자 25개 배열에 저장
+            1 -> { // 난이도 easy 일때 랜덤 숫자 25개 배열에 저장
                 while (i < 25) {
-                    randInt = random.nextInt(25)
+                    num = random.nextInt(25)
 
-                    if (!redundantInt.contains(randInt)) { // 랜덤으로 숫자 뽑아올 때 중복 방지
-                        redundantInt.add(randInt)
-                        number.add(randInt + 1)
+                    if (!randomInt.contains(num)) {
+                        randomInt.add(num)
+                        number.add(num + 1)
                         i++
                     }
                 }
                 i = 0
-                redundantInt.clear()
+                randomInt.clear()
 
             }
             else -> level = 2
@@ -349,7 +349,7 @@ class GameActivity : AppCompatActivity() {
                     } else if (nowNumber == number[i]) {
                         nowNumber++
                         binding.tvGameNownumber.text = nowNumber.toString()
-                        count += 5
+                        count += 3
                         btnCheck = true
                         buttonList[i].visibility = View.INVISIBLE
                     } else {
@@ -364,9 +364,9 @@ class GameActivity : AppCompatActivity() {
                         Toast.makeText(this, "시작버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
                     } else if (nowNumber == number[i]) {
                         nowNumber++
-                        buttonList[i].text = number2[i].toString()
+                        buttonList[i].text = number2[i].toString() // 숫자가 지워 지면 다음 배열에서 숫자 가져와 대입
                         binding.tvGameNownumber.text = nowNumber.toString()
-                        count += 5
+                        count += 3
                         btnCheck = true
                     } else if (nowNumber == number2[i]) {
                         nowNumber++
@@ -388,7 +388,7 @@ class GameActivity : AppCompatActivity() {
                         nowNumber++
                         buttonList[i].text = number2[i].toString()
                         binding.tvGameNownumber.text = nowNumber.toString()
-                        count += 5
+                        count += 3
                         btnCheck = true
                     } else if (nowNumber == number2[i]) {
                         nowNumber++

@@ -9,7 +9,7 @@
         android:id="@+id/tv_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/cookierun_bold"
         android:text="Level"
         android:textColor="@color/white"
