@@ -104,6 +104,7 @@ class GameActivity : AppCompatActivity() {
         setButtonClick() // 버튼 클릭시 동작 확인
 
         binding.ivGameStartBtn.setOnClickListener {
+            Toast.makeText(this, "START", Toast.LENGTH_SHORT).show()
             bgmPlayer.isLooping = true
             bgmPlayer.start()
             started = true
@@ -153,6 +154,7 @@ class GameActivity : AppCompatActivity() {
         // 게임 클리어 스레료
         Thread() {
             while (gameClear) {
+                Thread.sleep(1000)
                 if (nowNumber == endNumber) {
                     var intent = Intent(this, ClearActivity::class.java)
                     intent.putExtra("time", timer.toString())
@@ -186,32 +188,33 @@ class GameActivity : AppCompatActivity() {
 
     private fun setNumberList() {
 
-        buttonList.add(binding.btnGame1)
-        buttonList.add(binding.btnGame2)
-        buttonList.add(binding.btnGame3)
-        buttonList.add(binding.btnGame4)
-        buttonList.add(binding.btnGame5)
-        buttonList.add(binding.btnGame6)
-        buttonList.add(binding.btnGame7)
-        buttonList.add(binding.btnGame8)
-        buttonList.add(binding.btnGame9)
-        buttonList.add(binding.btnGame10)
-        buttonList.add(binding.btnGame11)
-        buttonList.add(binding.btnGame12)
-        buttonList.add(binding.btnGame13)
-        buttonList.add(binding.btnGame14)
-        buttonList.add(binding.btnGame15)
-        buttonList.add(binding.btnGame16)
-        buttonList.add(binding.btnGame17)
-        buttonList.add(binding.btnGame18)
-        buttonList.add(binding.btnGame19)
-        buttonList.add(binding.btnGame20)
-        buttonList.add(binding.btnGame21)
-        buttonList.add(binding.btnGame22)
-        buttonList.add(binding.btnGame23)
-        buttonList.add(binding.btnGame24)
-        buttonList.add(binding.btnGame25)
-
+        binding.apply {
+            buttonList.add(btnGame1)
+            buttonList.add(btnGame2)
+            buttonList.add(btnGame3)
+            buttonList.add(btnGame4)
+            buttonList.add(btnGame5)
+            buttonList.add(btnGame6)
+            buttonList.add(btnGame7)
+            buttonList.add(btnGame8)
+            buttonList.add(btnGame9)
+            buttonList.add(btnGame10)
+            buttonList.add(btnGame11)
+            buttonList.add(btnGame12)
+            buttonList.add(btnGame13)
+            buttonList.add(btnGame14)
+            buttonList.add(btnGame15)
+            buttonList.add(btnGame16)
+            buttonList.add(btnGame17)
+            buttonList.add(btnGame18)
+            buttonList.add(btnGame19)
+            buttonList.add(btnGame20)
+            buttonList.add(btnGame21)
+            buttonList.add(btnGame22)
+            buttonList.add(btnGame23)
+            buttonList.add(btnGame24)
+            buttonList.add(btnGame25)
+        }
     }
 
     private fun setFirstButton() {
