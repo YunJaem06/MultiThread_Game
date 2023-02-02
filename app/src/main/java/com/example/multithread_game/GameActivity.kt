@@ -251,6 +251,45 @@ class GameActivity : AppCompatActivity() {
         var i = 0
 
         when (level) {
+            1 -> { // 난이도 easy 일때 랜덤 숫자 25개 배열에 저장
+                while (i < 25) {
+                    num = random.nextInt(25)
+
+                    if (!randomInt.contains(num)) {
+                        randomInt.add(num)
+                        number.add(num + 1)
+                        i++
+                    }
+                }
+                i = 0
+                randomInt.clear()
+
+            }
+            2 -> { // 난이도 normal 일때, 랜덤 숫자 25개씩 2개 배열에 저장
+                while (i < 25) {
+                    num = random.nextInt(25)
+
+                    if (!randomInt.contains(num)) {
+                        randomInt.add(num)
+                        number2.add(num + 26)
+                        i++
+                    }
+                }
+                i = 0
+                randomInt.clear()
+
+                while (i < 25) {
+                    num = random.nextInt(25)
+
+                    if (!randomInt.contains(num)) {
+                        randomInt.add(num)
+                        number.add(num + 1)
+                        i++
+                    }
+                }
+                i = 0
+                randomInt.clear()
+            }
             3 -> { // 난이도 hard 일때, 랜덤 숫자 25개씩 4개 배열에 저장
                 while (i < 25) {
                     num = random.nextInt(25) // 랜덤 숫자 저장
@@ -301,50 +340,9 @@ class GameActivity : AppCompatActivity() {
                 randomInt.clear()
 
             }
-            2 -> { // 난이도 normal 일때, 랜덤 숫자 25개씩 2개 배열에 저장
-                while (i < 25) {
-                    num = random.nextInt(25)
-
-                    if (!randomInt.contains(num)) {
-                        randomInt.add(num)
-                        number2.add(num + 26)
-                        i++
-                    }
-                }
-                i = 0
-                randomInt.clear()
-
-                while (i < 25) {
-                    num = random.nextInt(25)
-
-                    if (!randomInt.contains(num)) {
-                        randomInt.add(num)
-                        number.add(num + 1)
-                        i++
-                    }
-                }
-                i = 0
-                randomInt.clear()
-
-            }
-            1 -> { // 난이도 easy 일때 랜덤 숫자 25개 배열에 저장
-                while (i < 25) {
-                    num = random.nextInt(25)
-
-                    if (!randomInt.contains(num)) {
-                        randomInt.add(num)
-                        number.add(num + 1)
-                        i++
-                    }
-                }
-                i = 0
-                randomInt.clear()
-
-            }
             else -> level = 2
         }
     }
-
     private fun setButtonClick() {
         for (i in 0..24) {
             buttonList[i].setOnClickListener {
