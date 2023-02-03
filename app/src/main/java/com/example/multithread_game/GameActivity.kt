@@ -253,16 +253,16 @@ class GameActivity : AppCompatActivity() {
         when (level) {
             1 -> { // 난이도 easy 일때 랜덤 숫자 25개 배열에 저장
                 while (i < 25) {
-                    num = random.nextInt(25)
+                    num = random.nextInt(25) // 랜덤 숫자 저장
 
-                    if (!randomInt.contains(num)) {
+                    if (!randomInt.contains(num)) { // 그 숫자 중복일 경우 다시 뽑기
                         randomInt.add(num)
                         number.add(num + 1)
                         i++
                     }
                 }
                 i = 0
-                randomInt.clear()
+                randomInt.clear() // 뽑은 숫자 배열 정리
 
             }
             2 -> { // 난이도 normal 일때, 랜덤 숫자 25개씩 2개 배열에 저장
@@ -292,16 +292,16 @@ class GameActivity : AppCompatActivity() {
             }
             3 -> { // 난이도 hard 일때, 랜덤 숫자 25개씩 4개 배열에 저장
                 while (i < 25) {
-                    num = random.nextInt(25) // 랜덤 숫자 저장
+                    num = random.nextInt(25)
 
-                    if (!randomInt.contains(num)) {  // 그 숫자 중복일 경우 다시 뽑기
+                    if (!randomInt.contains(num)) {
                         randomInt.add(num)
                         number4.add(num + 76)
                         i++
                     }
                 }
                 i = 0
-                randomInt.clear() // 뽑은 숫자 배열 정리
+                randomInt.clear()
 
                 while (i < 25) {
                     num = random.nextInt(25)
