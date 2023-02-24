@@ -13,7 +13,7 @@
 
 ### main 화면
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/96619472/216574417-8a4f26b7-74af-4977-9573-ca2ace92f9af.png" width="40%" height="30%">
+    <img src="https://user-images.githubusercontent.com/96619472/216574376-c3e86b3e-63c1-492b-9603-dbb768587061.png" width="40%" height="30%">
 </p>
 
 ### 게임 난이도 화면
@@ -46,7 +46,7 @@
 <p align="center">
     <img src="https://user-images.githubusercontent.com/96619472/216574417-8a4f26b7-74af-4977-9573-ca2ace92f9af.png" width="40%" height="30%">
 </p>
-https://user-images.githubusercontent.com/96619472/216574384-b2970a41-ab70-4cd6-8eb1-bfadc8368e3c.png
+
 * hp를 모두 잃을시 게임 오버가 되고 게임 시간과 점수가 나옵니다.
 
 ### Game 점수판 화면
