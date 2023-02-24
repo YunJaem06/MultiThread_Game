@@ -434,4 +434,7 @@ class GameActivity : AppCompatActivity() {
         super.onDestroy()
         bgmPlayer.stop()
     }
+    override fun onBackPressed() {
+        super.onBackPressed()
+    }
 }

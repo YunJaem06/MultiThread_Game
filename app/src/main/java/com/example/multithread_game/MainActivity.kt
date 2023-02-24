@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         binding.btnMainStart.setOnClickListener {
             var intent = Intent(this, LevelActivity::class.java)
             startActivity(intent)
-            finish()
         }
         binding.btnMainScore.setOnClickListener {
             var intent = Intent(this, ScoreActivity::class.java)
