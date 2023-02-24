@@ -18,15 +18,15 @@
 
 ### 게임 난이도 화면
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/96619472/216574412-23926d41-37ae-49c5-ba5e-2e3acd3a0706.png" width="40%" height="30%">
+    <img src="https://user-images.githubusercontent.com/96619472/216574384-b2970a41-ab70-4cd6-8eb1-bfadc8368e3c.png" width="40%" height="30%">
 </p>
 
 * 게임 난이도 별 선택 가능 easy = 25개, normal = 50개, hard = 100개 버튼이 있습니다.
 
 ### Game 화면
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/96619472/216574403-0c271200-dbc1-4c22-aa87-04e76425aacb.png" width="40%" height="30%">
-    <img src="https://user-images.githubusercontent.com/96619472/216574384-b2970a41-ab70-4cd6-8eb1-bfadc8368e3c.png" width="40%" height="30%">
+    <img src="https://user-images.githubusercontent.com/96619472/216574395-1a117747-c265-48a9-9f7f-1bf9e1b6fbb1.png" width="40%" height="30%">
+    <img src="https://user-images.githubusercontent.com/96619472/216574412-23926d41-37ae-49c5-ba5e-2e3acd3a0706.png" width="40%" height="30%">
 </p>
 
 * 스타트를 누루면 게임이 시작합니다.
@@ -44,14 +44,14 @@
 
 ### Game Over 화면
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/96619472/216574384-b2970a41-ab70-4cd6-8eb1-bfadc8368e3c.png" width="40%" height="30%">
+    <img src="https://user-images.githubusercontent.com/96619472/216574417-8a4f26b7-74af-4977-9573-ca2ace92f9af.png" width="40%" height="30%">
 </p>
-
+https://user-images.githubusercontent.com/96619472/216574384-b2970a41-ab70-4cd6-8eb1-bfadc8368e3c.png
 * hp를 모두 잃을시 게임 오버가 되고 게임 시간과 점수가 나옵니다.
 
 ### Game 점수판 화면
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/96619472/216574395-1a117747-c265-48a9-9f7f-1bf9e1b6fbb1.png" width="40%" height="30%">
+    <img src="https://user-images.githubusercontent.com/96619472/216574403-0c271200-dbc1-4c22-aa87-04e76425aacb.png" width="40%" height="30%">
 </p>
 
 * 나의 최고 점수와 시간을 확인할 수 있습니다.
