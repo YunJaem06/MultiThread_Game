@@ -1,9 +1,16 @@
 # [MultiThread을 이용한 게임 제작]
 ***
 #### Tech Stack
-* Glide, MultiThread, MediaPlayer, Sharedpreference
+* Glide, MultiThread, MediaPlayer, Sharedpreference, Lottie
 
 ***
+### main 화면
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/96619472/221159891-4602e865-9b0b-4527-bb27-15006300639e.png" width="40%" height="30%">
+</p>
+
+* Lottie 라이브러리를 활용하여 Animation Splash 화면을 구현하였습니다.
+
 ### main 화면
 <p align="center">
     <img src="https://user-images.githubusercontent.com/96619472/216574376-c3e86b3e-63c1-492b-9603-dbb768587061.png" width="40%" height="30%">
